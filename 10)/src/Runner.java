@@ -16,8 +16,8 @@ public class Runner {
     public static void main(String[] args) {
         String s = "Java now has regular expressions";
         System.out.println("1) " + s.matches("^Java"));
-        System.out.println("2) " + s.matches("\\Breg.*"));
-        System.out.println("3) " + s.matches("n.w\\s+h(a|i)s"));
+        System.out.println("2) " + s.matches("\Breg.*"));
+        System.out.println("3) " + s.matches("n.w\s+h(a|i)s"));
         System.out.println("4) " + s.matches("s?"));
         System.out.println("5) " + s.matches("s*"));
         System.out.println("6) " + s.matches("s+"));
