@@ -25,21 +25,29 @@ public class Runner {
             vector.add(scanner.nextLine());
         }
         System.out.println(vector.toString());
-        Pattern p = Pattern.compile("^.*");
+        Pattern p = Pattern.compile("class\\s[A-Z]\\w+");
         Matcher m;
         Iterator<String> it = vector.iterator();
-        int i = 1;
         while(it.hasNext()) {
             m = p.matcher(it.next());
-            try {
-                System.out.println(i++ + "; "+ m.start() + " " + m.group());
-            }
-            catch(IllegalStateException ex) {
-                System.out.println(i + "; не найдено");
+            if(m.find()) {
+                System.out.println( m.group());
             }
         }
-        m = p.matcher("public class Runner");
-        System.out.println(m.group());
-
     }
+}
+class Number2 extends Runner{
+
+}
+class Number3 extends Runner{
+
+}
+abstract class Number4 {
+    public abstract void print();
+}
+class Number5 {
+
+}
+class Number6 extends Runner{
+
 }
