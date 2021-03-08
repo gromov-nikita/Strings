@@ -6,6 +6,6 @@ letter and ends with a period.
  */
 public class Runner {
     public static void main(String[] args) {
-        System.out.println("Qwer.".matches("[QWERTYUIOPASDFGHJKLZXCVBNM]{1}\\D+\\.{1}"));
+        System.out.println("Qwer 34567 gfg.".matches("^[A-Z](\\w|\\s)*\\."));
     }
 }

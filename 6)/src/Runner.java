@@ -18,7 +18,7 @@ public class Runner {
     }
     @Override
     public String toString(){
-        return String.format("%d\n%d\n%f\n%f\n",i,l,(float)f,d);
+        return String.format("%d\n%d\n%f\n%f\n",i,l,f,d);
     }
 
     public static void main(String[] args) {

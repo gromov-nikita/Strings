@@ -25,7 +25,7 @@ public class Runner {
             vector.add(scanner.nextLine());
         }
         System.out.println(vector.toString());
-        Pattern p = Pattern.compile("class\\s[A-Z]\\w+");
+        Pattern p = Pattern.compile("class\\s+[A-Z]\\w+");
         Matcher m;
         Iterator<String> it = vector.iterator();
         while(it.hasNext()) {
@@ -48,6 +48,6 @@ abstract class Number4 {
 class Number5 {
 
 }
-class Number6 extends Runner{
+class             Number6        extends Runner{
 
 }

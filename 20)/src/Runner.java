@@ -11,7 +11,7 @@ public class Runner {
     private double d;
     private String s;
     public Runner(String str){
-        String[] save = str.split("\\|");
+        String[] save = str.split("[^\\w.]");
         a = Integer.valueOf(save[0]);
         b = Long.valueOf(save[1]);
         c = Float.valueOf(save[2]);
@@ -25,7 +25,7 @@ public class Runner {
     }
 
     public static void main(String[] args) {
-        Runner obj = new Runner("123|12345|123.34|125.3456745|Hello");
+        Runner obj = new Runner("123|12345|123.34 125.3456745|Hello");
         System.out.println(obj.toString());
     }
 }
