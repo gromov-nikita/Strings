@@ -8,17 +8,19 @@ name on the command line) and displays all the comments.
 Exercise 18: (8) Write a program that reads a Java source-code file (you provide the file
 name on the command line) and displays all the string literals in the code.
  */
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
+import java.net.URI;
+import java.nio.file.*;
 import java.sql.SQLOutput;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.Scanner;
-import java.util.Vector;
+import java.util.*;
 import java.util.regex.*;
 public class Runner {
     public static void main(String[] args) throws FileNotFoundException {
-        FileReader file = new FileReader("src\\Runner.java");
+        File f = new File("src\\Runner.java");
+        FileReader file = new FileReader(f.getAbsolutePath());
         Scanner scanner = new Scanner(file);
         Vector<String> vector= new Vector();
         while(scanner.hasNextLine()){
@@ -34,6 +36,8 @@ public class Runner {
                 System.out.println( m.group());
             }
         }
+
+
     }
 }
 class Number2 extends Runner{
