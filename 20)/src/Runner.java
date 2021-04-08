@@ -25,7 +25,7 @@ public class Runner {
     }
 
     public static void main(String[] args) {
-        Runner obj = new Runner("123/12345&123.34 125.3456745|Hello");
+        Runner obj = new Runner("123(12345)123.34;125.3456745$Hello");
         System.out.println(obj.toString());
     }
 }
